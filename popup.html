@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto Refresh</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 10px; }
-    button { margin: 5px; padding: 10px; }
-  </style>
-</head>
-<body>
-  <h3>Auto Refresh</h3>
-  <button id="start">Iniciar Auto-Refresh</button>
-  <button id="stop">Detener Auto-Refresh</button>
-  <p id="status">Estado: Inactivo</p>
-  <script src="popup.js"></script>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Configuración de Auto Refresh</title>
+    <style>
+      body {
+        width: 200px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+      }
+      #status {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Auto Refresh</h3>
+    <div>
+      <label for="interval">Intervalo (segundos):</label>
+      <input type="number" id="interval" min="1" value="15" />
+    </div>
+    <div>
+      <button id="save">Guardar</button>
+    </div>
+    <div>
+      <button id="start">Iniciar</button>
+      <button id="stop">Detener</button>
+    </div>
+    <div id="status">Estado: Inactivo</div>
+
+    <script src="popup.js"></script>
+  </body>
 </html>

@@ -1,3 +1,11 @@
+// Guardar el intervalo cuando el usuario lo cambie
+document.getElementById("save").addEventListener("click", () => {
+  const interval = document.getElementById("interval").value;
+  chrome.storage.sync.set({ refreshInterval: interval }, () => {
+    document.getElementById("status").innerText = `Intervalo guardado: ${interval} segundos`;
+  });
+});
+
 // Función para iniciar el auto-refresh
 document.getElementById("start").addEventListener("click", () => {
   chrome.runtime.sendMessage({ action: "startAutoRefresh" }, (response) => {
