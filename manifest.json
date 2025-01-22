@@ -3,7 +3,12 @@
   "name": "Auto Refresh",
   "version": "1.0",
   "description": "Recarga automáticamente la página cada 15 segundos.",
-  "permissions": ["storage", "activeTab", "tabs", "scripting"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
   "background": {
     "service_worker": "background.js"
   },
